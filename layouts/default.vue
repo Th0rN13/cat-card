@@ -1,17 +1,57 @@
 <template lang="pug">
   div
+    navigation
     nuxt
 </template>
 
-<style lang="sass">
-html
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
-  font-size: 16px
-  word-spacing: 1px
-  box-sizing: border-box
+<script>
+  import navigation from '~/components/nav.vue'
+  export default {
+    components: {
+      navigation
+    }
+  }
+</script>
 
-*, *:before, *:after
-  box-sizing: border-box
+<style lang="sass">
+*
+  padding: 0
   margin: 0
+  box-sizing: border-box
+  &:focus
+    outline: none;
+
+body
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  display: flex
+  flex-direction: column
+  min-height: 500px
+  height: 100%
+  justify-content: space-between
+  overflow-x: hidden
+
+a
+  text-decoration: none
+  color: #3498db
+
+.container
+  margin-left: auto
+  margin-right: auto
+
+@media screen and (max-width:767px)
+  .container
+    width: 100%
+
+@media screen and (min-width:768px)  and (max-width:991px)
+  .container
+    width: 720px
+
+@media screen and (min-width:992px)  and (max-width:1199px)
+  .container
+    width: 960px
+
+@media screen and (min-width:1200px)
+  .container
+    width: 1184px
 </style>
 

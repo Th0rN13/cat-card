@@ -1,19 +1,19 @@
 <template lang="pug">
   main.section
     .container.cat-food
-        h1 Ты сегодня покормил кота?
-        .card-set
-          card(v-for="card in cards"
-          :heading="card.heading"
-          :content="card.content"
-          :portions="card.portions"
-          :gift="card.gift"
-          :weight="card.weight"
-          :description="card.description"
-          :additional="card.additional"
-          :initActive="card.isActive"
-          :initDisabled="card.isDisabled"
-          :key="card.id")
+      h1 Ты сегодня покормил кота?
+      .card-set
+        card(v-for="card in cards"
+        :heading="card.heading"
+        :content="card.content"
+        :portions="card.portions"
+        :gift="card.gift"
+        :weight="card.weight"
+        :description="card.description"
+        :additional="card.additional"
+        :initActive="card.isActive"
+        :initDisabled="card.isDisabled"
+        :key="card.id")
 </template>
 
 <script>
@@ -39,11 +39,14 @@ export default {
 @import '~assets/_vars.sass'
 .section
   width: 100vw
-  min-height: calc(100vh - 20px)
+  min-height: 80vh
   background-color: #ecf0f1
   display: flex
   justify-content: center
   align-items: center
+
+.container
+  min-height: 80%
 
 .cat-food
   background: url("~assets/img/bg.png") center center
@@ -52,7 +55,9 @@ export default {
   flex-direction: column
   justify-content: center
   align-items: center
+  overflow: hidden
   h1
+    text-align: center
     font-size: 36px
     font-family: "Exo 2.0 - Thin"
     margin: 47px 0 23px
