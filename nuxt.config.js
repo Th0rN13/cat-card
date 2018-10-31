@@ -1,4 +1,7 @@
 module.exports = {
+  router: {
+    base: '/cat/'
+  },
   /*
   ** Headers of the page
   */
