@@ -1,6 +1,6 @@
 <template lang="pug">
   .card-one(:class="{'active': isActive , 'disabled': isDisabled }")
-    .card(@click="swapActive", @contextmenu.prevent="swapDisabled")
+    .card(@click="swapActive")
       .card-title Сказочное заморское яство
       .card-block
         .description
@@ -46,12 +46,7 @@
         if(!this.isDisabled) {
           this.isActive = !this.isActive;
         }
-      },
-      swapDisabled() {
-        this.isDisabled = !this.isDisabled;
-        if (this.isDisabled) {
-          this.isActive = false;
-        }
+        this.$store.commit('increment');
       }
     }
   }
